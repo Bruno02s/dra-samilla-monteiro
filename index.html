@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Samilla Monteiro - Dentista | Fortaleza-CE</title>
-    <meta name="description" content="Dra. Samilla Monteiro - Dentista especializada em Facetas em Resina, Lentes de Contato Dental, Próteses e Implantes. CRO/CE: 6631">
+    <title>Dra. Samilla Monteiro - Odontologia Especializada | Fortaleza-CE</title>
+    <meta name="description" content="Dra. Samilla Monteiro - Odontologia Especializada. Agende seu atendimento de Segunda à Sexta das 08h às 18h. CRO/CE: 6631">
     
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,68 +13,117 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
+        :root {
+            --primary-gold: #C8A882;
+            --secondary-gold: #D4B896;
+            --light-cream: #F5F0E8;
+            --warm-cream: #F0E6D6;
+            --text-dark: #3D3D3D;
+            --text-light: #6B6B6B;
+        }
+        
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
         }
         
-        .font-playfair {
-            font-family: 'Playfair Display', serif;
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif;
         }
         
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .brand-gradient {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
         }
         
-        .gradient-dental {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        .cream-bg {
+            background-color: var(--light-cream);
         }
         
-        .card-hover {
+        .warm-cream-bg {
+            background-color: var(--warm-cream);
+        }
+        
+        .gold-text {
+            color: var(--primary-gold);
+        }
+        
+        .elegant-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 168, 130, 0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .elegant-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(200, 168, 130, 0.15);
+            border-color: var(--primary-gold);
+        }
+        
+        .logo-container {
+            width: 120px;
+            height: 120px;
+        }
+        
+        .logo-bg {
+            background: linear-gradient(135deg, #F5F0E8 0%, #F0E6D6 100%);
+            border: 3px solid var(--primary-gold);
+        }
+        
+        .btn-gold {
+            background: var(--primary-gold);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 500;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        
-        .star-rating {
-            color: #fbbf24;
-        }
-        
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-slide-in {
-            animation: slideIn 0.6s ease-out;
-        }
-        
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-30px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
+        .btn-gold:hover {
+            background: var(--secondary-gold);
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 8px 25px rgba(200, 168, 130, 0.3);
+        }
+        
+        .btn-outline-gold {
+            border: 2px solid var(--primary-gold);
+            color: var(--primary-gold);
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-outline-gold:hover {
+            background: var(--primary-gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .floating-schedule {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-gold);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
         
         .floating-whatsapp {
@@ -82,60 +131,107 @@
             bottom: 20px;
             right: 20px;
             z-index: 1000;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
             animation: pulse 2s infinite;
         }
         
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
         
-        .service-icon {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        .navbar-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(200, 168, 130, 0.2);
         }
         
-        .navbar-blur {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.9);
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .decorative-element {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+            border-radius: 50%;
+            opacity: 0.05;
+            z-index: -1;
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, var(--primary-gold) 50%, transparent 100%);
+            margin: 2rem 0;
         }
     </style>
 </head>
-<body class="smooth-scroll">
+<body>
+    <!-- Floating Schedule Info -->
+    <div class="floating-schedule">
+        <i class="fas fa-clock mr-2"></i>
+        Segunda à Sexta: 08h às 18h
+    </div>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/5585987550023" target="_blank" class="floating-whatsapp">
-        <div class="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
-            <i class="fab fa-whatsapp text-2xl"></i>
-        </div>
+        <i class="fab fa-whatsapp text-xl"></i>
     </a>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200">
+    <nav class="fixed top-0 w-full z-50 navbar-glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <span class="font-playfair text-2xl font-bold gradient-bg bg-clip-text text-transparent">
-                            Dra. Samilla Monteiro
-                        </span>
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <!-- Logo -->
+                    <div class="logo-container rounded-full logo-bg flex items-center justify-center">
+                        <img src="logo.png" alt="Dra. Samilla Monteiro - Odontologia Especializada" class="w-24 h-24 object-contain">
+                    </div>
+                    <div class="hidden md:block">
+                        <h1 class="font-cormorant text-2xl font-semibold gold-text">Dra. Samilla Monteiro</h1>
+                        <p class="text-sm text-gray-600">Odontologia Especializada</p>
                     </div>
                 </div>
                 
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#inicio" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
-                        <a href="#sobre" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
-                        <a href="#servicos" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Serviços</a>
-                        <a href="#contato" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
-                        <a href="https://wa.me/5585987550023" target="_blank" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">
-                            Agendar Consulta
-                        </a>
-                    </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-[#C8A882] font-medium transition-colors">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-[#C8A882] font-medium transition-colors">Sobre</a>
+                    <a href="#servicos" class="text-gray-700 hover:text-[#C8A882] font-medium transition-colors">Serviços</a>
+                    <a href="#avaliacoes" class="text-gray-700 hover:text-[#C8A882] font-medium transition-colors">Avaliações</a>
+                    <a href="#contato" class="text-gray-700 hover:text-[#C8A882] font-medium transition-colors">Contato</a>
+                    <a href="https://wa.me/5585987550023" target="_blank" class="btn-gold">
+                        <i class="fab fa-whatsapp"></i>
+                        Agendar Consulta
+                    </a>
                 </div>
                 
                 <!-- Mobile menu button -->
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                <div class="lg:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-[#C8A882] focus:outline-none">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -143,13 +239,15 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#inicio" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Início</a>
-                <a href="#sobre" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Sobre</a>
-                <a href="#servicos" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Serviços</a>
-                <a href="#contato" class="text-gray-700 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Contato</a>
-                <a href="https://wa.me/5585987550023" target="_blank" class="btn-primary text-white block px-3 py-2 rounded-md text-base font-medium text-center">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+            <div class="px-4 pt-4 pb-6 space-y-3">
+                <a href="#inicio" class="block text-gray-700 hover:text-[#C8A882] font-medium py-2">Início</a>
+                <a href="#sobre" class="block text-gray-700 hover:text-[#C8A882] font-medium py-2">Sobre</a>
+                <a href="#servicos" class="block text-gray-700 hover:text-[#C8A882] font-medium py-2">Serviços</a>
+                <a href="#avaliacoes" class="block text-gray-700 hover:text-[#C8A882] font-medium py-2">Avaliações</a>
+                <a href="#contato" class="block text-gray-700 hover:text-[#C8A882] font-medium py-2">Contato</a>
+                <a href="https://wa.me/5585987550023" target="_blank" class="btn-gold mt-4">
+                    <i class="fab fa-whatsapp"></i>
                     Agendar Consulta
                 </a>
             </div>
@@ -157,46 +255,76 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="pt-16 gradient-bg text-white">
+    <section id="inicio" class="pt-20 min-h-screen cream-bg relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="decorative-element top-10 left-10"></div>
+        <div class="decorative-element bottom-20 right-10"></div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-fade-in">
-                    <h1 class="font-playfair text-4xl md:text-6xl font-bold mb-6">
-                        Transformando vidas entregando o sorriso dos sonhos!
-                    </h1>
-                    <p class="text-xl mb-8 text-gray-100">
-                        Especialista em Facetas em Resina, Lentes de Contato Dental, Próteses e Implantes. 
-                        CRO/CE: 6631
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/5585987550023" target="_blank" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
-                            <i class="fab fa-whatsapp mr-2"></i>
-                            Agendar Consulta
+            <div class="grid lg:grid-cols-2 gap-16 items-center min-h-[70vh]">
+                <div class="animate-on-scroll">
+                    <div class="mb-8">
+                        <h2 class="font-cormorant text-5xl lg:text-7xl font-bold text-gray-800 leading-tight mb-6">
+                            Agende seu
+                            <span class="gold-text italic">atendimento</span>
+                        </h2>
+                        <div class="h-1 w-24 brand-gradient rounded-full mb-8"></div>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="elegant-card rounded-3xl p-8 mb-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="font-cormorant text-2xl font-semibold gold-text">Horário de Atendimento</h3>
+                                <i class="fas fa-clock text-2xl gold-text"></i>
+                            </div>
+                            <p class="text-xl font-medium text-gray-700">Segunda à Sexta</p>
+                            <p class="text-3xl font-bold gold-text">08h às 18h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="https://wa.me/5585987550023" target="_blank" class="btn-gold text-lg">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            Agendar pelo WhatsApp
                         </a>
-                        <a href="#servicos" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center">
+                        <a href="#servicos" class="btn-outline-gold text-lg">
+                            <i class="fas fa-tooth"></i>
                             Nossos Serviços
                         </a>
                     </div>
                     
                     <!-- Rating -->
-                    <div class="mt-8 flex items-center">
-                        <div class="flex star-rating">
+                    <div class="mt-12 flex items-center">
+                        <div class="flex text-yellow-400 text-xl mr-4">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="ml-2 text-gray-100">4,9 (47 avaliações)</span>
+                        <div>
+                            <p class="font-semibold text-gray-800">4,9 estrelas</p>
+                            <p class="text-gray-600">47 avaliações</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="animate-slide-in">
+                <div class="animate-on-scroll flex justify-center">
                     <div class="relative">
-                        <div class="w-80 h-80 mx-auto rounded-full overflow-hidden border-8 border-white shadow-2xl">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234facfe;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2300f2fe;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23grad)'/%3E%3Ccircle cx='200' cy='180' r='60' fill='white' opacity='0.8'/%3E%3Cpath d='M160 180 Q200 140 240 180 Q200 220 160 180' fill='white' opacity='0.9'/%3E%3Ctext x='200' y='300' text-anchor='middle' fill='white' font-size='20' font-family='Inter'%3EDra. Samilla%3C/text%3E%3Ctext x='200' y='325' text-anchor='middle' fill='white' font-size='16' font-family='Inter'%3EMonteiro%3C/text%3E%3C/svg%3E" 
-                                 alt="Dra. Samilla Monteiro" 
-                                 class="w-full h-full object-cover">
+                        <!-- Main image container -->
+                        <div class="w-96 h-96 rounded-full brand-gradient p-2 shadow-2xl">
+                            <div class="w-full h-full rounded-full cream-bg flex items-center justify-center relative overflow-hidden">
+                                <!-- Professional photo placeholder -->
+                                <div class="absolute inset-0 brand-gradient opacity-10"></div>
+                                <div class="text-center z-10">
+                                    <div class="w-32 h-32 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
+                                        <img src="logo.png" alt="Dra. Samilla Monteiro - Odontologia Especializada" class="w-full h-full object-contain">
+                                    </div>
+                                    <h3 class="font-cormorant text-3xl font-bold text-gray-800 mb-2">Dra. Samilla Monteiro</h3>
+                                    <p class="text-lg gold-text font-medium mb-1">CRO/CE: 6631</p>
+                                    <p class="text-gray-600">Odontologia Especializada</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,77 +333,84 @@
     </section>
 
     <!-- About Section -->
-    <section id="sobre" class="py-20 bg-gray-50">
+    <section id="sobre" class="py-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-playfair text-4xl font-bold text-gray-900 mb-4">Sobre a Dra. Samilla Monteiro</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Dentista empreendedora dedicada a transformar sorrisos e elevar a autoestima dos pacientes
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="font-cormorant text-5xl font-bold text-gray-800 mb-6">
+                    Transformando vidas entregando o 
+                    <span class="gold-text italic">sorriso dos sonhos!</span>
+                </h2>
+                <div class="section-divider max-w-md mx-auto"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Dentista empreendedora dedicada a proporcionar tratamentos de excelência com carinho e dedicação
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="animate-fade-in">
-                    <h3 class="font-playfair text-3xl font-semibold mb-6 text-gray-900">
-                        Experiência e Dedicação
-                    </h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        Com registro CRO/CE: 6631, a Dra. Samilla Monteiro é uma profissional apaixonada pela odontologia estética, 
-                        especializada em procedimentos que devolvem a confiança e o sorriso dos sonhos aos seus pacientes.
-                    </p>
-                    <p class="text-gray-700 mb-8 leading-relaxed">
-                        Sua filosofia é simples: "Transformo vidas entregando o sorriso dos sonhos!" Cada tratamento é 
-                        personalizado e executado com a mais alta qualidade e cuidado.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600 mb-2">618</div>
-                            <div class="text-gray-600">Publicações</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-3xl font-bold text-blue-600 mb-2">2.284</div>
-                            <div class="text-gray-600">Seguidores</div>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-on-scroll">
+                    <div class="elegant-card rounded-3xl p-10">
+                        <h3 class="font-cormorant text-3xl font-semibold mb-8 gold-text">Experiência & Dedicação</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed text-lg">
+                            Com registro <strong>CRO/CE: 6631</strong>, a Dra. Samilla Monteiro é uma profissional apaixonada pela odontologia estética, 
+                            especializada em procedimentos que devolvem a confiança e o sorriso dos sonhos aos seus pacientes.
+                        </p>
+                        <p class="text-gray-700 mb-8 leading-relaxed text-lg">
+                            Cada tratamento é personalizado e executado com a mais alta qualidade, utilizando tecnologia de ponta 
+                            e técnicas modernas para garantir os melhores resultados.
+                        </p>
+                        
+                        <div class="text-center mt-8">
+                            <a href="https://wa.me/5585988156949" target="_blank" 
+                               class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#C8A882] to-[#D4B896] text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-whatsapp text-xl mr-3"></i>
+                                Agende sua consulta
+                            </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="animate-slide-in">
-                    <div class="bg-white p-8 rounded-2xl shadow-xl">
-                        <div class="mb-6">
-                            <h4 class="font-semibold text-lg mb-4 text-gray-900">Especialidades</h4>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                                    <span>Facetas em Resina</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                                    <span>Lentes de Contato Dental</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                                    <span>Próteses</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                                    <span>Implantes</span>
-                                </li>
-                            </ul>
+                <div class="animate-on-scroll">
+                    <div class="warm-cream-bg rounded-3xl p-10">
+                        <h4 class="font-cormorant text-2xl font-semibold mb-8 text-gray-800">Especialidades</h4>
+                        <div class="space-y-6">
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Facetas em Resina</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Lentes de Contato Dental</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Implantes Dentários</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Botox</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Alinhadores Invisíveis</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <div class="w-3 h-3 brand-gradient rounded-full mr-4 group-hover:scale-125 transition-transform"></div>
+                                <span class="text-lg text-gray-700 group-hover:text-[#C8A882] transition-colors">Tratamento de Canal</span>
+                            </div>
                         </div>
                         
-                        <div class="border-t pt-6">
-                            <div class="flex items-center mb-2">
-                                <div class="flex star-rating mr-2">
+                        <div class="mt-10 pt-8 border-t border-gray-300">
+                            <div class="flex items-center justify-center mb-4">
+                                <div class="flex text-yellow-400 text-xl mr-4">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <span class="font-semibold">4,9</span>
+                                <span class="text-2xl font-bold gold-text">4,9</span>
                             </div>
-                            <p class="text-gray-600 text-sm">Baseado em 47 avaliações</p>
+                            <p class="text-center text-gray-600">Baseado em 47 avaliações</p>
                         </div>
                     </div>
                 </div>
@@ -284,141 +419,320 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="py-20 bg-white">
+    <section id="servicos" class="py-20 cream-bg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-playfair text-4xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Oferecemos tratamentos odontológicos de excelência com tecnologia de ponta
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-cormorant text-5xl font-bold text-gray-800 mb-6">Nossos Serviços</h2>
+                <div class="section-divider max-w-md mx-auto"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Oferecemos tratamentos odontológicos de excelência com tecnologia de ponta e cuidado personalizado
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <div class="service-grid">
+                <!-- Facetas em Resina -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-tooth text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-semibold text-xl mb-4 text-center text-gray-900">Facetas em Resina</h3>
-                    <p class="text-gray-600 text-center leading-relaxed">
-                        Transformação completa do sorriso com facetas em resina de alta qualidade e durabilidade.
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Facetas em Resina</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Transformação completa do sorriso com facetas em resina de alta qualidade, proporcionando naturalidade e durabilidade.
                     </p>
+                    <div class="text-sm gold-text font-medium">Consulte valores</div>
                 </div>
                 
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <!-- Lentes de Contato -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-eye text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-semibold text-xl mb-4 text-center text-gray-900">Lentes de Contato Dental</h3>
-                    <p class="text-gray-600 text-center leading-relaxed">
-                        Lentes ultra-finas para correção de imperfeições e criação de sorrisos perfeitos.
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Lentes de Contato</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Lentes ultra-finas para correção de imperfeições e criação de sorrisos perfeitos com máxima naturalidade.
                     </p>
+                    <div class="text-sm gold-text font-medium">Avaliação personalizada</div>
                 </div>
                 
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-crown text-white text-2xl"></i>
-                    </div>
-                    <h3 class="font-semibold text-xl mb-4 text-center text-gray-900">Próteses</h3>
-                    <p class="text-gray-600 text-center leading-relaxed">
-                        Próteses dentárias personalizadas para recuperação total da função mastigatória.
-                    </p>
-                </div>
-                
-                <div class="card-hover bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                    <div class="service-icon w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <!-- Implantes Dentários -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-tools text-white text-2xl"></i>
                     </div>
-                    <h3 class="font-semibold text-xl mb-4 text-center text-gray-900">Implantes</h3>
-                    <p class="text-gray-600 text-center leading-relaxed">
-                        Implantes dentários com tecnologia avançada para substituição permanente de dentes.
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Implantes Dentários</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Implantes com tecnologia avançada para substituição permanente de dentes, devolvendo função e estética.
                     </p>
+                    <div class="text-sm gold-text font-medium">Avaliação gratuita</div>
+                </div>
+                
+                <!-- Botox -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-syringe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Botox</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Aplicação de botox para harmonização facial e tratamento de bruxismo, proporcionando bem-estar e estética.
+                    </p>
+                    <div class="text-sm gold-text font-medium">Procedimento especializado</div>
+                </div>
+                
+                <!-- Alinhadores Invisíveis -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-align-center text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Alinhadores Invisíveis</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Correção ortodôntica discreta e confortável com alinhadores transparentes de última geração.
+                    </p>
+                    <div class="text-sm gold-text font-medium">Ortodontia moderna</div>
+                </div>
+                
+                <!-- Tratamento de Canal -->
+                <div class="elegant-card rounded-3xl p-8 text-center animate-on-scroll">
+                    <div class="w-20 h-20 brand-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-procedures text-white text-2xl"></i>
+                    </div>
+                    <h3 class="font-cormorant text-2xl font-semibold mb-4 text-gray-800">Tratamento de Canal</h3>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Endodontia moderna para preservação e tratamento de dentes comprometidos com técnicas indolores.
+                    </p>
+                    <div class="text-sm gold-text font-medium">Preservação dental</div>
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="https://wa.me/5585987550023" target="_blank" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-flex items-center">
-                    <i class="fab fa-whatsapp mr-2"></i>
-                    Agende uma Avaliação
+            <div class="text-center mt-16 animate-on-scroll">
+                <a href="https://wa.me/5585987550023" target="_blank" class="btn-gold text-xl">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    Agende sua Avaliação Gratuita
                 </a>
+                <p class="mt-4 text-gray-600">Atendimento de Segunda à Sexta das 08h às 18h</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="avaliacoes" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-cormorant text-5xl font-bold text-gray-800 mb-6">
+                    O que nossos pacientes 
+                    <span class="gold-text italic">falam sobre nós</span>
+                </h2>
+                <div class="section-divider max-w-md mx-auto"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    Depoimentos reais de pacientes que transformaram seus sorrisos com nossos tratamentos
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8 mb-12">
+                <!-- Review 1 - Veruska Gomes -->
+                <div class="elegant-card rounded-3xl p-8 animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-r from-[#C8A882] to-[#D4B896] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            V
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg">Veruska Gomes</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic mb-4">
+                        "Dra. Samilla proporciona uma experiência única no que diz respeito aos procedimentos odontológicos, com utilização de materiais de alta qualidade, equipamentos super modernos, e atendimento de excelência. Fiz um tratamento de canal e..."
+                    </p>
+                    <p class="text-sm text-gray-500">3 meses atrás</p>
+                </div>
+                
+                <!-- Review 2 - Mauricio Fontenele -->
+                <div class="elegant-card rounded-3xl p-8 animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-r from-[#C8A882] to-[#D4B896] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg">Mauricio Fontenele</h4>
+                            <div class="flex text-yellow-400 text-sm mb-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-xs text-gray-500">Local Guide • 576 avaliações</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic mb-4">
+                        "Atendimento excepcional, extremamente carismática, trabalha com perfeição. Já indiquei outras pessoas e todos tiveram a mesma impressão."
+                    </p>
+                    <p class="text-sm text-gray-500">11 meses atrás</p>
+                </div>
+                
+                <!-- Review 3 - Samara Vieira Almeida -->
+                <div class="elegant-card rounded-3xl p-8 animate-on-scroll">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-r from-[#C8A882] to-[#D4B896] rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg">Samara Vieira Almeida</h4>
+                            <div class="flex text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic mb-4">
+                        "Já sou paciente há um tempo, sempre que preciso eu volto, e o atendimento é sempre maravilhoso, desde a recepção ao consultório, equipe 1000. Indico e recomendo, trabalho da Dr. Samila é impecável."
+                    </p>
+                    <p class="text-sm text-gray-500">1 ano atrás</p>
+                </div>
+            </div>
+            
+            <!-- Extended Review - Ludmila Ventura -->
+            <div class="max-w-4xl mx-auto animate-on-scroll">
+                <div class="elegant-card rounded-3xl p-10">
+                    <div class="flex items-center mb-8">
+                        <div class="w-16 h-16 bg-gradient-to-r from-[#C8A882] to-[#D4B896] rounded-full flex items-center justify-center text-white font-bold text-2xl mr-6">
+                            L
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-xl">Ludmila Ventura</h4>
+                            <div class="flex text-yellow-400 text-lg mb-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-sm text-gray-500">32 avaliações • 2 anos atrás</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-700 leading-relaxed text-lg italic">
+                            "Serviço dentário seja para qual especialidade é muitas vezes uma obrigação necessária, porém a Dra. Samilla da forma que conduz desde o acolhimento, competência, pontualidade, atenção, esclarecimento das opções, deixa esse serviço leve, agradável e realiza com muito entusiasmo! Claramente ama demais o que faz e por isso o resultado e sucesso são garantidos! Amo seu espaço! Energia boa e vibrações de luz, muito estiloso e agradável, designer moderno e TV no teto para opção durante os procedimentos!!! Dá vontade de aparecer de surpresa pra visitar e agradecer sempre meu melhor sorriso feito por vc! Gratidão querida! Parabéns por todas suas conquistas! Quem conhece não te deixa!!! Obrigada por cuidar de nós!!!!"
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Review Stats -->
+            <div class="text-center mt-16 animate-on-scroll">
+                <div class="elegant-card rounded-3xl p-8 max-w-2xl mx-auto">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="flex text-yellow-400 text-3xl mr-6">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-4xl font-bold gold-text">4,9</p>
+                            <p class="text-gray-600">de 5 estrelas</p>
+                        </div>
+                    </div>
+                    <p class="text-xl text-gray-700 mb-6">
+                        Baseado em <span class="font-semibold gold-text">47+ avaliações</span> de pacientes reais
+                    </p>
+                    <a href="https://wa.me/5585987550023" target="_blank" 
+                       class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#C8A882] to-[#D4B896] text-white font-semibold rounded-full hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                        <i class="fab fa-whatsapp text-xl mr-3"></i>
+                        Seja o próximo a sorrir!
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato" class="py-20 bg-gray-50">
+    <section id="contato" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="font-playfair text-4xl font-bold text-gray-900 mb-4">Entre em Contato</h2>
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="font-cormorant text-5xl font-bold text-gray-800 mb-6">Entre em Contato</h2>
+                <div class="section-divider max-w-md mx-auto"></div>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Agende sua consulta e dê o primeiro passo para o sorriso dos seus sonhos
                 </p>
             </div>
             
-            <div class="grid lg:grid-cols-2 gap-12">
+            <div class="grid lg:grid-cols-2 gap-16">
                 <!-- Contact Info -->
-                <div class="animate-fade-in">
-                    <div class="bg-white p-8 rounded-2xl shadow-xl">
-                        <h3 class="font-playfair text-2xl font-semibold mb-8 text-gray-900">Informações de Contato</h3>
+                <div class="animate-on-scroll">
+                    <div class="elegant-card rounded-3xl p-10">
+                        <h3 class="font-cormorant text-3xl font-semibold mb-8 gold-text">Informações de Contato</h3>
                         
-                        <div class="space-y-6">
+                        <div class="space-y-8">
                             <div class="flex items-start">
-                                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                <div class="w-14 h-14 brand-gradient rounded-full flex items-center justify-center mr-6 mt-1">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
-                                    <p class="text-gray-600">
-                                        Ed. Uno Medical & Office - Av. Pontes Vieira, 2340<br>
-                                        Sala 1121 - São João do Tauape<br>
+                                    <h4 class="font-semibold text-gray-800 mb-2 text-lg">Endereço</h4>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Ed. Uno Medical & Office<br>
+                                        Av. Pontes Vieira, 2340 - Sala 1121<br>
+                                        São João do Tauape<br>
                                         Fortaleza - CE, 60130-238
                                     </p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-phone text-white"></i>
+                                <div class="w-14 h-14 brand-gradient rounded-full flex items-center justify-center mr-6 mt-1">
+                                    <i class="fas fa-phone text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
-                                    <a href="tel:+5585987550023" class="text-blue-600 hover:text-blue-800">(85) 98755-0023</a>
+                                    <h4 class="font-semibold text-gray-800 mb-2 text-lg">Telefone</h4>
+                                    <a href="tel:+5585987550023" class="text-xl gold-text hover:text-[#D4B896] font-medium">(85) 98755-0023</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fab fa-whatsapp text-white"></i>
+                                <div class="w-14 h-14 brand-gradient rounded-full flex items-center justify-center mr-6 mt-1">
+                                    <i class="fab fa-whatsapp text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                                    <a href="https://wa.me/5585987550023" target="_blank" class="text-blue-600 hover:text-blue-800">(85) 98755-0023</a>
+                                    <h4 class="font-semibold text-gray-800 mb-2 text-lg">WhatsApp</h4>
+                                    <a href="https://wa.me/5585987550023" target="_blank" class="text-xl gold-text hover:text-[#D4B896] font-medium">(85) 98755-0023</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fab fa-instagram text-white"></i>
+                                <div class="w-14 h-14 brand-gradient rounded-full flex items-center justify-center mr-6 mt-1">
+                                    <i class="fab fa-instagram text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Instagram</h4>
-                                    <a href="https://instagram.com/drasamillamenteiro" target="_blank" class="text-blue-600 hover:text-blue-800">@drasamillamenteiro</a>
+                                    <h4 class="font-semibold text-gray-800 mb-2 text-lg">Instagram</h4>
+                                    <a href="https://instagram.com/drasamillamenteiro" target="_blank" class="text-xl gold-text hover:text-[#D4B896] font-medium">@drasamillamenteiro</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-start">
-                                <div class="service-icon w-12 h-12 rounded-full flex items-center justify-center mr-4 mt-1">
-                                    <i class="fas fa-clock text-white"></i>
+                                <div class="w-14 h-14 brand-gradient rounded-full flex items-center justify-center mr-6 mt-1">
+                                    <i class="fas fa-clock text-white text-xl"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-semibold text-gray-900 mb-1">Horário</h4>
-                                    <p class="text-gray-600">Aberto · Fecha às 18:00</p>
+                                    <h4 class="font-semibold text-gray-800 mb-2 text-lg">Horário de Funcionamento</h4>
+                                    <p class="text-gray-600 text-lg">Segunda à Sexta: <span class="font-semibold">08h às 18h</span></p>
+                                    <p class="text-gray-500">Aberto · Fecha às 18:00</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="mt-8 pt-8 border-t">
-                            <a href="https://wa.me/5585987550023" target="_blank" class="w-full btn-primary text-white py-3 rounded-lg font-semibold flex items-center justify-center">
-                                <i class="fab fa-whatsapp mr-2"></i>
+                        <div class="mt-10 pt-8 border-t border-gray-300">
+                            <a href="https://wa.me/5585987550023" target="_blank" class="w-full btn-gold text-lg flex justify-center">
+                                <i class="fab fa-whatsapp text-xl"></i>
                                 Agendar pelo WhatsApp
                             </a>
                         </div>
@@ -426,10 +740,10 @@
                 </div>
                 
                 <!-- Map -->
-                <div class="animate-slide-in">
-                    <div class="bg-white p-8 rounded-2xl shadow-xl h-full">
-                        <h3 class="font-playfair text-2xl font-semibold mb-8 text-gray-900">Localização</h3>
-                        <div class="h-96 rounded-lg overflow-hidden">
+                <div class="animate-on-scroll">
+                    <div class="elegant-card rounded-3xl p-8 h-full">
+                        <h3 class="font-cormorant text-3xl font-semibold mb-8 gold-text">Nossa Localização</h3>
+                        <div class="h-96 rounded-2xl overflow-hidden shadow-lg">
                             <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.2836284627936!2d-38.5436!3d-3.7571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74a4a2c17b3b3%3A0x6d6b1f4a8e8e8e8e!2sAv.%20Pontes%20Vieira%2C%202340%20-%20São%20João%20do%20Tauape%2C%20Fortaleza%20-%20CE%2C%2060130-238!5e0!3m2!1spt-BR!2sbr!4v1234567890123"
                                 width="100%" 
@@ -438,13 +752,14 @@
                                 allowfullscreen="" 
                                 loading="lazy" 
                                 referrerpolicy="no-referrer-when-downgrade"
-                                class="rounded-lg">
+                                class="rounded-2xl">
                             </iframe>
                         </div>
                         <div class="mt-6">
-                            <p class="text-gray-600 text-sm">
-                                <i class="fas fa-info-circle mr-2"></i>
-                                Localizado no UNO Medical & Office, um moderno centro médico em Fortaleza
+                            <p class="text-gray-600 leading-relaxed">
+                                <i class="fas fa-info-circle gold-text mr-2"></i>
+                                Localizado no prestigioso UNO Medical & Office, um moderno centro médico em Fortaleza, 
+                                com fácil acesso e estacionamento disponível.
                             </p>
                         </div>
                     </div>
@@ -454,13 +769,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="gradient-bg text-white py-12">
+    <footer class="brand-gradient text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-12">
                 <div>
-                    <h3 class="font-playfair text-2xl font-bold mb-4">Dra. Samilla Monteiro</h3>
-                    <p class="text-gray-200 mb-4">
-                        Transformando vidas entregando o sorriso dos sonhos!
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                            <svg width="40" height="40" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="60" cy="60" r="55" fill="none" stroke="#C8A882" stroke-width="2"/>
+                                <path d="M45 35 C45 28, 52 25, 60 25 C68 25, 75 28, 75 35 C75 42, 70 48, 65 55 C62 60, 58 60, 55 55 C50 48, 45 42, 45 35 Z" 
+                                      fill="#C8A882"/>
+                                <path d="M52 32 C54 30, 58 30, 60 32 C62 30, 66 30, 68 32 C68 36, 65 40, 60 42 C55 40, 52 36, 52 32 Z" 
+                                      fill="white"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-cormorant text-2xl font-bold">Dra. Samilla Monteiro</h3>
+                            <p class="text-gray-200">Odontologia Especializada</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-200 mb-4 leading-relaxed">
+                        Transformando vidas entregando o sorriso dos sonhos! Dentista empreendedora dedicada à excelência.
                     </p>
                     <p class="text-gray-200 text-sm">
                         CRO/CE: 6631 | Dentista Empreendedora
@@ -468,35 +797,47 @@
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Serviços</h4>
-                    <ul class="space-y-2 text-gray-200">
-                        <li>Facetas em Resina</li>
-                        <li>Lentes de Contato Dental</li>
-                        <li>Próteses</li>
-                        <li>Implantes</li>
+                    <h4 class="font-cormorant text-xl font-semibold mb-6">Especialidades</h4>
+                    <ul class="space-y-3 text-gray-200">
+                        <li class="flex items-center"><i class="fas fa-tooth mr-3"></i>Facetas em Resina</li>
+                        <li class="flex items-center"><i class="fas fa-eye mr-3"></i>Lentes de Contato Dental</li>
+                        <li class="flex items-center"><i class="fas fa-tools mr-3"></i>Implantes Dentários</li>
+                        <li class="flex items-center"><i class="fas fa-syringe mr-3"></i>Botox</li>
+                        <li class="flex items-center"><i class="fas fa-align-center mr-3"></i>Alinhadores Invisíveis</li>
+                        <li class="flex items-center"><i class="fas fa-procedures mr-3"></i>Tratamento de Canal</li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="font-semibold text-lg mb-4">Contato</h4>
-                    <div class="space-y-2 text-gray-200">
-                        <p><i class="fas fa-phone mr-2"></i>(85) 98755-0023</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>São João do Tauape, Fortaleza-CE</p>
-                        <div class="flex space-x-4 mt-4">
-                            <a href="https://wa.me/5585987550023" target="_blank" class="text-white hover:text-gray-300 transition-colors">
-                                <i class="fab fa-whatsapp text-xl"></i>
+                    <h4 class="font-cormorant text-xl font-semibold mb-6">Contato & Horários</h4>
+                    <div class="space-y-4 text-gray-200">
+                        <p class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>(85) 98755-0023
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3"></i>São João do Tauape, Fortaleza-CE
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>Segunda à Sexta: 08h às 18h
+                        </p>
+                        <div class="flex space-x-4 mt-6">
+                            <a href="https://wa.me/5585987550023" target="_blank" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+                                <i class="fab fa-whatsapp"></i>
                             </a>
-                            <a href="https://instagram.com/drasamillamenteiro" target="_blank" class="text-white hover:text-gray-300 transition-colors">
-                                <i class="fab fa-instagram text-xl"></i>
+                            <a href="https://instagram.com/drasamillamenteiro" target="_blank" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-colors">
+                                <i class="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-300 mt-8 pt-8 text-center">
+            <div class="border-t border-gray-300 border-opacity-30 mt-12 pt-8 text-center">
                 <p class="text-gray-200">
-                    © 2025 Dra. Samilla Monteiro. Todos os direitos reservados.
+                    © 2025 Dra. Samilla Monteiro - Odontologia Especializada. Todos os direitos reservados.
+                </p>
+                <p class="text-gray-300 text-sm mt-2">
+                    Desenvolvido com carinho para proporcionar a melhor experiência aos pacientes.
                 </p>
             </div>
         </div>
@@ -507,9 +848,11 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -522,7 +865,9 @@
                         block: 'start'
                     });
                     // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
+                    if (mobileMenu) {
+                        mobileMenu.classList.add('hidden');
+                    }
                 }
             });
         });
@@ -536,31 +881,44 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
+                    entry.target.classList.add('animate');
                 }
             });
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.card-hover, .animate-fade-in, .animate-slide-in').forEach(el => {
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
         
         // Navbar background on scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg');
-            } else {
-                navbar.classList.remove('shadow-lg');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                } else {
+                    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                }
             }
         });
         
         // WhatsApp button analytics (optional)
         document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
             link.addEventListener('click', () => {
-                // Add your analytics tracking here if needed
-                console.log('WhatsApp link clicked');
+                console.log('WhatsApp link clicked - Potential lead generated');
+            });
+        });
+        
+        // Initialize animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Trigger initial animations for elements in viewport
+            const initialElements = document.querySelectorAll('.animate-on-scroll');
+            initialElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('animate');
+                }
             });
         });
     </script>
